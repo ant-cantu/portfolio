@@ -148,14 +148,16 @@ main {
 #soft-skills,
 #links {
     display: flex;
-    flex-wrap: wrap;
+    flex-grow: 1;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    width: 20vw;
-    height: 26vh;
+    width: 300px;
+    height: 250px;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     border-radius: 16px;
+    overflow-y: auto;
 }
 
 /* Tech Stack Container */
