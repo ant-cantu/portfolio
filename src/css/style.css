@@ -14,6 +14,9 @@ html {
 body {
     background-color: black;
     color: white;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 strong {
@@ -41,10 +44,11 @@ header {
     color: white;
     font-size: 1.5rem;
     transition: 0.3s;
-
-    &:hover {
-        color:rgb(9, 122, 228);
-    }
+    border: 1px solid transparent;
+    padding: 5px;
+}
+.nav ul li a:hover {
+    color:rgb(9, 122, 228);
 }
 
 .nav ul li {
@@ -57,7 +61,16 @@ header {
     gap: 25px;
     width: 100vw;
     margin: 0;
-    padding: 0 45px;
+    padding: 10px 45px;
+}
+
+#resume {
+    border: 1px solid white;
+    padding: 5px 10px 5px 10px;
+}
+#resume:hover {
+    background-color: #097ae4;
+    color:white;
 }
 
 .hero {
@@ -67,6 +80,41 @@ header {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+.typewriter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    box-sizing: border-box;
+    padding-left: 25%;
+    padding-bottom: 64vh;
+    height: 100vh;
+    /* width: 100vw; */
+    font-size: 2rem;
+    pointer-events: none;
+}
+.typewriter-container p {
+    padding: 0;
+    margin: 0;
+}
+.typewriter {
+    font-size: 2rem;
+}
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background-color: black;
+    margin-left: 2px;
+    animation: blink 0.7s step-end infinite;
+    vertical-align: bottom;
+}
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
 }
 
 /* Main Content */
@@ -88,10 +136,8 @@ main {
 }
 
 .about {
-    /* width: 100vw;
-    height: 100vh; */
     display: flex;
-    justify-content: flex-start; /* evenly */
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -108,7 +154,10 @@ main {
 }
 
 #profile-img {
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
 }
 
 #profile-img img {
@@ -121,6 +170,7 @@ main {
     padding: 15px;
     width: 65vw;
     gap: 25px;
+    flex: 1;
 }
 
 #writing p {
@@ -131,10 +181,9 @@ main {
     text-decoration: none;
     color: inherit;
     transition: 0.3s;
-
-    &:hover {
-        color: white;
-    }
+}
+#writing p a:hover {
+    color: white;
 }
 
 .skills {
@@ -149,11 +198,10 @@ main {
 #links {
     display: flex;
     flex-grow: 1;
-    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 250px;
+    height: 275px;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     border-radius: 16px;
@@ -162,13 +210,15 @@ main {
 
 /* Tech Stack Container */
 #stack,
-#soft-skills {
+#soft-skills,
+#links {
     flex-direction: column;
     justify-content: flex-start;
 }
 
 #stack #header,
-#soft-skills #header {
+#soft-skills #header,
+#links #header {
     padding: 10px 0 0 10px;
     width: 100%;
     height: auto;
@@ -179,17 +229,18 @@ main {
 }
 
 #stack #container,
-#soft-skills #container {
+#soft-skills #container,
+#links #container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 5px;
-    /* flex: 1; */
     padding: 10px;
 }
 
-#skill-type {
+#skill-type,
+#link {
     background-color: white;
     border-radius: 16px;
     font-size: 1rem;
@@ -200,29 +251,40 @@ main {
     display: inline-block;
     cursor: pointer;
     transition: 0.3s;
-
-    &:hover {
-        background-color: rgb(9, 122, 228);
-        color: white;
-    }
+}
+#skill-type:hover {
+    background-color: rgb(9, 122, 228);
+    color: white;
 }
 
-#skill-type .tooltip {
-    visibility: hidden;
-    opacity: 0;
-    width: 180px;
+#link {
+    background-color: #097ae4;
+}
+#link:hover {
+    background-color: white;
+}
+
+#link a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#link a:hover {
+    background-color: white;
+    color: black;
+}
+
+#fixed-tooltip {
+    position: fixed;
     background-color: #333;
-    color: #fff;
-    text-align: center;
+    color: white;
+    padding: 6px 10px;
     border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    transition: opacity 0.3s;
+    font-size: 0.8rem;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 9999;
 }
 
 #skill-type:hover .tooltip {
@@ -230,8 +292,17 @@ main {
     opacity: 1;
 }
 
+/* Projects Container */
+/* .projects {
+    display: flex;
+    height: 100vw;
+    width: 100vw;
+    border: 1px solid red;
+} */
+
 /* Global Style */
 .slide-in {
+    position: relative;
     transform: translateX(100%);
     opacity: 0;
     transition: transform 1s ease-out, opacity 1s ease-out;
