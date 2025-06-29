@@ -46,6 +46,11 @@
 
 #writing p {
     font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+#writing p:last-of-type {
+    padding-bottom: 0;
 }
 
 #writing p a {
