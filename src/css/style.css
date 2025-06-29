@@ -24,6 +24,10 @@ strong {
     font-weight: 600;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 .main-section {
     display: flex;
     flex-direction: column;
@@ -41,7 +45,6 @@ strong {
     opacity: 0;
     transition: transform 1s ease-out, opacity 1s ease-out;
 }
-
 .slide-in.visibile {
     transform: translateX(0);
     opacity: 1;

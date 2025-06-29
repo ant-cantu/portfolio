@@ -52,6 +52,10 @@ header {
 }
 
 .hero {
+    background-image: url('../img/hero.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
