@@ -11,7 +11,7 @@ document.querySelectorAll('.slide-in').forEach(el => {
     observer.observe(el);
 });
 
-document.querySelectorAll('.slide-up').forEach(el => {
+document.querySelectorAll('.appear').forEach(el => {
     observer.observe(el);
 });
 
