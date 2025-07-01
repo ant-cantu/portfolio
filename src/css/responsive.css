@@ -83,6 +83,11 @@
     }
 
     /* About Me */
+    .about {
+        justify-content: center;
+        padding-right: 15px;
+    }
+
     #profile-img {
         display: none;
     }
@@ -126,5 +131,6 @@
     .projects #sub2 {
         justify-content: center;
         align-items: center;
+        padding-right: 15px;
     }
 }
