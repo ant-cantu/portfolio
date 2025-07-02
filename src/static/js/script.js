@@ -99,3 +99,21 @@ document.addEventListener('DOMContentLoaded', () => {
     typeLoop();
 });
 
+// Contact Form
+document.querySelector("#contact-form").addEventListener('submit', function(e) {
+    e.preventDefault() // Prevent default form
+
+    const formData = new FormData(this);
+
+    fetch("/", {
+        "method": "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById("successModal").style.display = "flex";
+            document.querySelector("#contact-form").reset();
+        }
+    })
+});
