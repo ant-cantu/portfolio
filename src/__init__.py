@@ -63,6 +63,7 @@ def submit():
 @app.route("/privacy-policy")
 def privacy():
     return render_template('privacy.html')
-    
-if __name__ == "__main__":
-    app.run(debug=True)
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
