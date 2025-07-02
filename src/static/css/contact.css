@@ -20,7 +20,9 @@
 .contact form {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     gap: 15px;
 }
 
@@ -45,23 +47,7 @@
 }
 
 .nameField,
-.emailField {
-    border-radius: 8px;
-    padding: 8px 12px;
-    font-size: 16px;
-    background-color: #fff;
-    color: #000;
-    outline: none;
-    transition: box-shadow 0.2s;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    width: 650px;
-    height: 25px;
-}
-.nameField:focus,
-.emailField:focus {
-    box-shadow: 0 0 0 2px #097ae4;
-}
-
+.emailField,
 .messageField {
     border-radius: 8px;
     padding: 8px 12px;
@@ -71,17 +57,27 @@
     outline: none;
     transition: box-shadow 0.2s;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    width: 650px;
-    height: 250px;
+    /* width: 650px; */
+    width: 100%;
+    height: 25px;
 }
-.messageField:focus {
+.nameField:focus,
+.emailField:focus {
     box-shadow: 0 0 0 2px #097ae4;
+}
+
+.messageField {
+    height: 250px;
 }
 
 .termsBox {
     border-radius: 8px;
     background-color: #fff;
     outline: none;
+}
+
+.form-container #button-div {
+    width: 100%;
 }
 
 .form-container button {
@@ -128,6 +124,14 @@
 #successModal button:hover {
     background-color: white;
     color: black;
+}
+
+#modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 /* Hide the honeypot so bots don't detect it */

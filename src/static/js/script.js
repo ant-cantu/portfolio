@@ -102,18 +102,33 @@ document.addEventListener('DOMContentLoaded', () => {
 // Contact Form
 document.querySelector("#contact-form").addEventListener('submit', function(e) {
     e.preventDefault() // Prevent default form
-
     const formData = new FormData(this);
 
-    fetch("/", {
+    fetch("/submit-form", {
         "method": "POST",
         body: formData
     })
     .then(response => response.json())
     .then(data => {
+        const modalContent = document.getElementById("modalContent");
+
         if (data.success) {
-            document.getElementById("successModal").style.display = "flex";
-            document.querySelector("#contact-form").reset();
+            modalContent.innerHTML = `
+                <p>Thank you for your message!</p>
+                <p>I will respond to you as soon as possible.</p>
+            `;
+        } else {
+            let errors = "";
+            for(const field in data.errors) {
+                data.errors[field].forEach(msg => {
+                    errors += `<li>${msg}</li>`;
+                });
+            }
+            modalContent.innerHTML = `
+            <p>An error has occured:</p>
+            <ul>${errors}</ul>`;
         }
-    })
+        document.getElementById("successModal").style.display = "flex";
+        document.querySelector("#contact-form").reset();
+    });
 });
