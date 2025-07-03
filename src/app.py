@@ -1,25 +1,32 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, abort
 from flask_limiter import Limiter, RateLimitExceeded
 from flask_limiter.util import get_remote_address
 import requests
 from forms import ContactForm
 from dotenv import load_dotenv
-import os
+import os, subprocess, hmac, hashlib
 
 load_dotenv()
 
-DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
-
-print(DISCORD_WEBHOOK_URL)
-
 app = Flask(__name__)
 
+# Secret Key CRSF Protection
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+# Discord Webhook URL
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
+
+# Redis Server URI
+REDIS_URI = os.getenv("REDIS_URI")
+
+# GitHub Deploy Webhook Secret
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
 
 limiter = Limiter(
     get_remote_address,
     app=app,
     storage_uri="memory://"
+    # storage_uri=REDIS_URI
 )
 
 @app.route("/", methods=["GET", "POST"])
@@ -29,7 +36,6 @@ def home():
         'index.html', 
         form=form
     )
-
 
 @app.route("/submit-form", methods=['POST'])
 def submit():
@@ -64,6 +70,22 @@ def submit():
 def privacy():
     return render_template('privacy.html')
 
+@app.route("/github-deploy", methods=["POST"])
+def github_deploy():
+    signature = request.headers.get("X-Hub-Signature-256")
+    if signature is None:
+        abort(403)
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+    sha_name, signature_hash = signature.split('=')
+    if sha_name != 'sha256':
+        abort(403)
+
+    mac = hmac.new(WEBHOOK_SECRET, msg=request.data, digestmod=hashlib.sha256)
+    if not hmac.compare_digest(mac.hexdigest(), signature_hash):
+        abort(403)
+    
+    subprocess.run(["/opt/bitnami/portfolio/deploy.sh"])
+    return "OK", 200
+
+if __name__ == "__main__":
+    app.run(debug=True)

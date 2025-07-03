@@ -57,3 +57,15 @@ strong {
 .appear.visibile {
     opacity: 1;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100vw;    
+}
+footer a {
+    text-decoration: none;
+    color: rgb(9, 122, 228);
+}
