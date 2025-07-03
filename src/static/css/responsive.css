@@ -133,4 +133,35 @@
         align-items: center;
         padding-right: 15px;
     }
+
+    /* Contact Form */
+    .contact {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 15px;
+        gap: 50px;
+    }
+
+    .contact .form-container {
+        width: 80vw;
+        padding: 20px;
+        /* padding: 20px 20px 20px 5px; */
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact #contact-form {
+        width: 75vw;
+    }
+
+    .nameField,
+    .emailField,
+    .messageField {
+        width: 97%;
+        min-width: 0;
+    }
 }

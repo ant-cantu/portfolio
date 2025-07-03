@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
     <meta property="og:title" content="Anthony Cantu">
-    <meta property="og:description" content="My portfolio site">
-    <meta property="og:image" content="https://antcantu.com/img/web-preview.png">
+    <meta property="og:description" content="Showcasing my skills, projects, and experience in software development. Explore my portfolio and connect with me.">
+    <meta property="og:image" content="https://antcantu.com/static/img/web-preview.png">
     <meta property="og:url" content="https://antcantu.com">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/top.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/top.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
     <title>Anthony Cantu</title>
 </head>
     <body>
@@ -23,15 +24,16 @@
                     <li><a href="#page-top">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
                     <li><a href="https://github.com/ant-cantu" target="_blank" rel="noopener">My GitHub</a></li>
-                    <li><a id="resume" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+                    <li><a id="resume" href="{{ url_for('static', filename='files/resume.pdf') }}" target="_blank" rel="noopener">Resume</a></li>
                 </ul>
             </div>
 
             <div class="mobile-nav">
                 <ul>
-                    <li><a href="https://github.com/ant-cantu" target="_blank" rel="noopener"><img src="img/github-mark-white.png"></a></li>
-                    <li><a id="resume" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+                    <li><a href="https://github.com/ant-cantu" target="_blank" rel="noopener"><img src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a></li>
+                    <li><a id="resume" href="{{ url_for('static', filename='files/resume.pdf') }}" target="_blank" rel="noopener">Resume</a></li>
                 </ul>
             </div>
 
@@ -52,7 +54,7 @@
 
                     <div class="content"> 
                         <div id="profile-img">
-                            <img src="img/profile-pic.jpg">
+                            <img src="{{ url_for('static', filename='img/profile-pic.jpg') }}">
                         </div>
 
                         <div id="about-content">
@@ -171,7 +173,7 @@
 
                     <div class="appear" id="sub1">
                         <div id="project">
-                            <img id="sample" src="img/fumbldai.png" alt="Image of Fumbld AI home page.">
+                            <img id="sample" src="{{ url_for('static', filename='img/fumbldai.png') }}" alt="Image of Fumbld AI home page.">
                             <div id="container">
                                 <h1>Fumbld AI</h1>
                                 <p>
@@ -179,12 +181,12 @@
                                     Analyzes your roster against your opponent's using current player stats, with support for 
                                     Sleeper and Yahoo Sports roster imports.
                                 </p>
-                                <a href="https://github.com/ant-cantu/fumbld-ai" target="_blank" rel="noopener"><img id="github-logo" src="img/github-mark-white.png"></a>
+                                <a href="https://github.com/ant-cantu/fumbld-ai" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
                             </div>
                         </div>
 
                         <div id="project">
-                            <img id="sample" src="img/petgpt.png" alt="Image of PetGPT running on a desktop.">
+                            <img id="sample" src="{{ url_for('static', filename='img/petgpt.png') }}" alt="Image of PetGPT running on a desktop.">
                             <div id="container">
                                 <h1>PetGPT</h1>
                                 <p>
@@ -192,12 +194,12 @@
                                     The project overlays a small animated companion on your desktop that you can drag 
                                     around and chat with in real time.
                                 </p>
-                                <a href="https://github.com/ant-cantu/PetGPT" target="_blank" rel="noopener"><img id="github-logo" src="img/github-mark-white.png"></a>
+                                <a href="https://github.com/ant-cantu/PetGPT" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
                             </div>
                         </div>
 
                         <div id="project">
-                            <img id="sample" src="img/dms.png" alt="Image of custom DMS made for my current job.">
+                            <img id="sample" src="{{ url_for('static', filename='img/dms.png') }}" alt="Image of custom DMS made for my current job.">
                             <div id="container">
                                 <h1>My DMS</h1>
                                 <p>
@@ -210,26 +212,26 @@
                                     sales data (including employee numbers, part numbers, quantities sold, and invoice or repair order numbers), while also tracking inventory locations, prices, 
                                     and markup rates. The application was actively used by my team of seven, enabling us to maintain departmental operations and continue serving customers despite the system outage. -->
                                 </p>
-                                <a href="https://github.com/ant-cantu/dms" target="_blank" rel="noopener"><img id="github-logo" src="img/github-mark-white.png"></a>
+                                <a href="https://github.com/ant-cantu/dms" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="appear" id="sub2">
                         <div id="project">
-                            <img id="sample" src="img/hellodragon.png" alt="Image of Hello Dragon running on a mobile device.">
+                            <img id="sample" src="{{ url_for('static', filename='img/hellodragon.png') }}" alt="Image of Hello Dragon running on a mobile device.">
                             <div id="container">
                                 <h1>Hello Dragon</h1>
                                 <p>
                                     I developed this simple Flappy Bird clone for Android as my personal 'Hello World' project in Unity. 
                                     The goal was to refresh my C# skills and gain hands-on experience with the Unity Engine.
                                 </p>
-                                <a href="https://github.com/ant-cantu/Hello-Dragon" target="_blank" rel="noopener"><img id="github-logo" src="img/github-mark-white.png"></a>
+                                <a href="https://github.com/ant-cantu/Hello-Dragon" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
                             </div>
                         </div>
 
                         <div id="project">
-                            <img id="sample" src="img/portfolio.png" alt="Image of this website.">
+                            <img id="sample" src="{{ url_for('static', filename='img/portfolio.png') }}" alt="Image of this website.">
                             <div id="container">
                                 <h1>My Portfolio</h1>
                                 <p>
@@ -237,12 +239,12 @@
                                     Built with HTML, CSS, and JavaScript, it highlights my skills and tech stack in a clean, responsive design. 
                                     Feel free to explore the code and see how it all comes together.
                                 </p>
-                                <a href="https://github.com/ant-cantu/portfolio" target="_blank" rel="noopener"><img id="github-logo" src="img/github-mark-white.png"></a>
+                                <a href="https://github.com/ant-cantu/portfolio" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
                             </div>
                         </div>
 
                         <div id="project">
-                            <img id="sample" src="img/tictactoe.png" alt="Image of my tic tac toe game running on a desktop.">
+                            <img id="sample" src="{{ url_for('static', filename='img/tictactoe.png') }}" alt="Image of my tic tac toe game running on a desktop.">
                             <div id="container">
                                 <h1>Tic Tac Toe</h1>
                                 <p>
@@ -250,10 +252,35 @@
                                     It allows you to play against another human player or test your skills by challenging the computer. 
                                     The project is a great example of applying fundamental programming concepts in C++ to create an interactive game.
                                 </p>
-                                <a href="https://github.com/ant-cantu/Tic-Tac-Toe-Game" target="_blank" rel="noopener"><img id="github-logo" src="img/github-mark-white.png"></a>
+                                <a href="https://github.com/ant-cantu/Tic-Tac-Toe-Game" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
                             </div>
                         </div>
                     </div>     
+                </div>
+
+                <div class="contact" id="contact">
+                    <div id="header">Contact Me</div>
+
+                    <div class="form-container">
+                        <form id="contact-form" method="POST">
+                            {{ form.hidden_tag() }}
+                            {{ form.honeypot }}
+
+                            {{ form.name(class="nameField", placeholder="Enter your name") }}
+                            {{ form.email(class="emailField", placeholder="Enter your email address") }}
+                            {{ form.message(class="messageField", placeholder="How are you doing?") }}
+                            <label>
+                                {{ form.terms(class="termsBox") }} 
+                                I agree to the <a href="/privacy-policy" target="_blank" rel="noopener">privacy policy</a> and understand that my information will be transmitted electronically.
+                            </label>
+                            <div id="button-div"><button type="submit">Send</button></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="successModal" style="display: none;">
+                    <div id="modalContent"></div>
+                    <button onclick="document.getElementById('successModal').style.display='none'">Close</button>
                 </div>
 
             </div>
@@ -264,6 +291,6 @@
         </footer>
 
         <div id="fixed-tooltip"></div>
-        <script src="js/script.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </body>
 </html>

@@ -1,0 +1,145 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    /* gap: 10px; */
+}
+
+.contact #header {
+    font-size: 36px;
+    letter-spacing: 10px;
+    color:rgb(9, 122, 228);
+    padding-top: 50px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.contact .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(38, 38, 38);
+    border-radius: 16px;
+    color: white;
+    width: 45vw;
+    padding: 40px;
+}
+
+.contact #contact-form {
+    width: 40vw;
+}
+
+.contact #contact-form a {
+    text-decoration: none;
+    color: #097ae4;
+}
+
+.nameField,
+.emailField,
+.messageField {
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    /* width: 650px; */
+    width: 100%;
+    height: 25px;
+}
+.nameField:focus,
+.emailField:focus {
+    box-shadow: 0 0 0 2px #097ae4;
+}
+
+.messageField {
+    height: 250px;
+}
+
+.termsBox {
+    border-radius: 8px;
+    background-color: #fff;
+    outline: none;
+}
+
+.form-container #button-div {
+    width: 100%;
+}
+
+.form-container button {
+    background-color: #097ae4;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    width: 125px;
+    height: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: white;
+    color: black;
+}
+
+#successModal {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    gap: 15px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+#successModal button {
+    background-color: #097ae4;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    width: 125px;
+    height: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#successModal button:hover {
+    background-color: white;
+    color: black;
+}
+
+#modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Hide the honeypot so bots don't detect it */
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
