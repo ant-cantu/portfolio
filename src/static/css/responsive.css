@@ -164,4 +164,11 @@
         width: 97%;
         min-width: 0;
     }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

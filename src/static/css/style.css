@@ -63,9 +63,13 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 100vw;    
+    width: 100vw;
+    padding-bottom: 10px;   
 }
 footer a {
     text-decoration: none;
     color: rgb(9, 122, 228);
+}
+footer p {
+    padding: 0;
 }
