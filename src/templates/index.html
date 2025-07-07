@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <meta property="og:title" content="Anthony Cantu">
+    <meta property="og:description" content="Showcasing my skills, projects, and experience in software development. Explore my portfolio and connect with me.">
+    <meta property="og:image" content="https://antcantu.com/static/img/web-preview.png">
+    <meta property="og:url" content="https://antcantu.com">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/top.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <title>Anthony Cantu</title>
+</head>
+    <body>
+        <header id="page-top">
+            <div class="nav">
+                <ul>
+                    <li><a href="#page-top">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a id="resume" href="https://github.com/ant-cantu" target="_blank" rel="noopener">GitHub</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav">
+                <ul>
+                    <li><a href="https://github.com/ant-cantu" target="_blank" rel="noopener"><img src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a></li>
+                </ul>
+            </div>
+
+            <div class="typewriter-container">
+                <p>Hello, I am Anthony.</p>
+                <span>I am a <span class="typewriter"></span></span>
+            </div>
+
+            <div class="hero">
+                <!-- <img src="img/hero.png" alt="Hero image: laptop dark background"> -->
+            </div>
+        </header>
+
+        <main>
+            <div class="main-section">
+                <div class="about" id="about">
+                    <div class="header">About Me</div>
+
+                    <div class="content"> 
+                        <div id="profile-img">
+                            <img src="{{ url_for('static', filename='img/profile-pic.jpg') }}">
+                        </div>
+
+                        <div id="about-content">
+                            <div class="slide-in" id="writing">
+                                <p>
+                                    My tech stack includes <strong>C++</strong>, <strong>Python</strong>, <strong>JavaScript</strong>, 
+                                    <strong>C#</strong>, <strong>Flask</strong>, <strong>SQLAlchemy</strong>, <strong>HTML</strong>, and <strong>CSS</strong>. 
+                                    I also have practical experience working with modern APIs such as the <strong>OpenAI API</strong> and <strong>Yahoo Sports API</strong>, 
+                                    building and integrating dynamic web applications. Through these projects, I’ve honed my skills in prompt engineering, secure data 
+                                    handling, database management, and designing scalable systems.
+                                </p>
+
+                                <p>
+                                    My ongoing projects, including a fantasy football web application that leverages <strong>AI-powered</strong> start/sit 
+                                    recommendations, reflect my dedication to applying <strong>hypothesis-driven development</strong>, <strong>design thinking</strong>, 
+                                    and <strong>agile principles</strong> in real-world scenarios. I thrive on <strong>problem-solving</strong> and feel a deep sense of accomplishment 
+                                    when delivering effective solutions to challenging problems.
+                                </p>
+
+                                <p>
+                                    As a committed lifelong learner, I actively explore new technologies through a combination of online resources and AI tools, structuring lesson 
+                                    plans and receiving iterative feedback to accelerate my growth. I am currently pursuing an <strong>A.S. in Computer Science</strong> 
+                                    while also continuously expanding my skills through self-directed projects and online learning. I am now seeking opportunities as a junior software 
+                                    developer or apprentice, where I can contribute to meaningful projects and collaborate with innovative teams. For a closer look at my work, 
+                                    I invite you to explore my <strong><a href="https://github.com/ant-cantu" target="_blank" rel="noopener">GitHub</a></strong>, which showcases several of the projects I have developed.
+                                </p>
+
+                                <p>
+                                    <strong>For privacy reasons, my resume is available on request.</strong>
+                                </p>
+                            </div>
+
+                            <div class="skills slide-in">
+                                <div id="stack">
+                                    <div id="header">Tech Stack</div>
+
+                                    <div id="container">
+                                        <span id="skill-type">C++</span>
+                                        <span id="skill-type">Python</span>
+                                        <span id="skill-type">JavaScript</span>
+                                        <span id="skill-type">C#</span>
+                                        <span id="skill-type">Flask</span>
+                                        <span id="skill-type">SQLAlchemy</span>
+                                        <span id="skill-type">HTML</span>
+                                        <span id="skill-type">CSS</span>
+                                        <span id="skill-type">SQLite</span>
+                                        <span id="skill-type">AWS Lightsail</span>
+                                        <span id="skill-type">Git</span>
+                                        <span id="skill-type">OpenAI API</span>
+                                        <span id="skill-type">Yahoo! Sports API</span>
+                                        <span id="skill-type">VS Code</span>
+                                        <span id="skill-type">Unity</span>
+                                    </div>
+                                </div>
+
+                                <div id="soft-skills">
+                                    <div id="header">Soft Skills</div>
+
+                                    <div id="container">
+                                        <span id="skill-type" data-tooltip="Approaching complex challenges with logical, creative, and effective solutions.">
+                                            Problem-Solving
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Quickly learning and adjusting to new tools, technologies, and environments.">
+                                            Adaptability
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Sharing ideas clearly with both technical and non-technical audiences.">
+                                            Communication
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Working productively with others to achieve shared goals in agile environments.">
+                                            Teamwork & Collaboration
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Always looking for opportunities to learn, grow, and improve.">
+                                            Growth Mindset
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Proactively taking ownership and driving progress without waiting to be told.">
+                                            Initiative & Self-Direction
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Ensuring precision and high quality in every aspect of work.">
+                                            Attention to Detail
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Prioritizing tasks and meeting deadlines efficiently and reliably.">
+                                            Time Management
+                                        </span>
+
+                                        <span id="skill-type" data-tooltip="Breaking down complex problems into clear, manageable parts.">
+                                            Analytical Thinking
+                                        </span>
+                                    </div>
+
+                                </div>
+                                    
+                                <div id="links">
+                                    <div id="header">Favorite Projects</div>
+
+                                    <div id="container">
+                                        <span id="link"><a href="https://github.com/ant-cantu/fumbld-ai-public/" target="_blank" rel="noopener">Fumbld AI</a></span>
+                                        <span id="link"><a href="https://github.com/ant-cantu/PetGPT" target="_blank" rel="noopener">PetGPT</a></span>
+                                        <span id="link"><a href="https://github.com/ant-cantu/dms" target="_blank" rel="noopener">My DMS</a></span>
+                                        <span id="link"><a href="https://github.com/ant-cantu/portfolio" target="_blank" rel="noopener">This Website</a></span>
+                                        <span id="link"><a href="https://github.com/ant-cantu/Hello-Dragon" target="_blank" rel="noopener">(Unity) Hello Dragon</a></span>
+                                        <span id="link"><a href="https://github.com/ant-cantu/Tic-Tac-Toe-Game" target="_blank" rel="noopener">(C++) Tic-Tac-Toe</a></span>
+                                        <span id="link"><a href="https://github.com/ant-cantu/Encoder-Decoder" target="_blank" rel="noopener">(C++) Encorder/Decoder</a></span>
+                                        <span id="link"><a href="https://github.com/ant-cantu/Memory-Match-Game" target="_blank" rel="noopener">(C++) Memory Match</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects" id="projects">
+                    <div id="header">My Projects</div>
+
+                    <div class="appear" id="sub1">
+                        <div id="project">
+                            <img id="sample" src="{{ url_for('static', filename='img/fumbldai.png') }}" alt="Image of Fumbld AI home page.">
+                            <div id="container">
+                                <h1>Fumbld AI</h1>
+                                <p>
+                                    An AI-powered Flask application providing personalized fantasy football start/sit recommendations. 
+                                    Analyzes your roster against your opponent's using current player stats, with support for 
+                                    Sleeper and Yahoo Sports roster imports. Please view my GitHub link for more information. 
+                                </p>
+                                <p>
+                                    <strong>Source is available upon request</strong>
+                                </p>
+                                <a href="https://github.com/ant-cantu/fumbld-ai-public/" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
+                            </div>
+                        </div>
+
+                        <div id="project">
+                            <img id="sample" src="{{ url_for('static', filename='img/petgpt.png') }}" alt="Image of PetGPT running on a desktop.">
+                            <div id="container">
+                                <h1>PetGPT</h1>
+                                <p>
+                                    PetGPT is a Unity-based desktop pet that interacts with you using OpenAI's ChatGPT API. 
+                                    The project overlays a small animated companion on your desktop that you can drag 
+                                    around and chat with in real time.
+                                </p>
+                                <a href="https://github.com/ant-cantu/PetGPT" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
+                            </div>
+                        </div>
+
+                        <div id="project">
+                            <img id="sample" src="{{ url_for('static', filename='img/dms.png') }}" alt="Image of custom DMS made for my current job.">
+                            <div id="container">
+                                <h1>My DMS</h1>
+                                <p>
+                                    In June 2024, a cyberattack on CDK disrupted parts tracking and billing at my workplace. 
+                                    To keep operations running, I developed an application that logged sales data (part numbers, quantities, 
+                                    invoice numbers) and tracked inventory locations, prices, and markups. Used by my seven-person team, 
+                                    this tool helped maintain workflow during the outage.
+                                    <!-- In June 2024, a cyberattack on CDK — a large dealer management system (DMS) — disrupted operations for dealerships worldwide, including my workplace. 
+                                    This outage left us unable to track parts billing or determine accurate part costs. To address this critical gap, I developed an application that logged 
+                                    sales data (including employee numbers, part numbers, quantities sold, and invoice or repair order numbers), while also tracking inventory locations, prices, 
+                                    and markup rates. The application was actively used by my team of seven, enabling us to maintain departmental operations and continue serving customers despite the system outage. -->
+                                </p>
+                                <a href="https://github.com/ant-cantu/dms" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="appear" id="sub2">
+                        <div id="project">
+                            <img id="sample" src="{{ url_for('static', filename='img/hellodragon.png') }}" alt="Image of Hello Dragon running on a mobile device.">
+                            <div id="container">
+                                <h1>Hello Dragon</h1>
+                                <p>
+                                    I developed this simple Flappy Bird clone for Android as my personal 'Hello World' project in Unity. 
+                                    The goal was to refresh my C# skills and gain hands-on experience with the Unity Engine.
+                                </p>
+                                <a href="https://github.com/ant-cantu/Hello-Dragon" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
+                            </div>
+                        </div>
+
+                        <div id="project">
+                            <img id="sample" src="{{ url_for('static', filename='img/portfolio.png') }}" alt="Image of this website.">
+                            <div id="container">
+                                <h1>My Portfolio</h1>
+                                <p>
+                                    This is the source code for my portfolio website, which you’re currently viewing. 
+                                    Built with Python/Flask, HTML, CSS, and JavaScript, it highlights my skills and tech stack in a clean, responsive design. 
+                                    Feel free to explore the code and see how it all comes together.
+                                </p>
+                                <a href="https://github.com/ant-cantu/portfolio" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
+                            </div>
+                        </div>
+
+                        <div id="project">
+                            <img id="sample" src="{{ url_for('static', filename='img/tictactoe.png') }}" alt="Image of my tic tac toe game running on a desktop.">
+                            <div id="container">
+                                <h1>Tic Tac Toe</h1>
+                                <p>
+                                    This repository features a simple yet engaging command-line implementation of Tic-Tac-Toe, written in C++. 
+                                    It allows you to play against another human player or test your skills by challenging the computer. 
+                                    The project is a great example of applying fundamental programming concepts in C++ to create an interactive game.
+                                </p>
+                                <a href="https://github.com/ant-cantu/Tic-Tac-Toe-Game" target="_blank" rel="noopener"><img id="github-logo" src="{{ url_for('static', filename='img/github-mark-white.png') }}"></a>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+
+                <div class="contact" id="contact">
+                    <div id="header">Contact Me</div>
+
+                    <div class="form-container">
+                        <form id="contact-form" method="POST">
+                            {{ form.hidden_tag() }}
+                            {{ form.honeypot }}
+
+                            {{ form.name(class="nameField", placeholder="Enter your name") }}
+                            {{ form.email(class="emailField", placeholder="Enter your email address") }}
+                            {{ form.message(class="messageField", placeholder="How are you doing?") }}
+                            <label>
+                                {{ form.terms(class="termsBox") }} 
+                                I agree to the <a href="/privacy-policy" target="_blank" rel="noopener">privacy policy</a> and understand that my information will be transmitted electronically.
+                            </label>
+                            <div id="button-div"><button type="submit">Send</button></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="successModal" style="display: none;">
+                    <div id="modalContent"></div>
+                    <button onclick="document.getElementById('successModal').style.display='none'">Close</button>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Anthony Cantu. All rights reserved.</p> 
+            <a href="/privacy-policy">Privacy Policy</a>
+        </footer>
+
+        <div id="fixed-tooltip"></div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>

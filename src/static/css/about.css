@@ -1,0 +1,170 @@
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    /* flex: 1; */
+}
+
+.about .content {
+    display: flex;
+    justify-content: space-evenly;
+    /* width: 100vw; */
+    gap: 10px;
+}
+
+.about .header {
+    font-size: 36px;
+    letter-spacing: 10px;
+    color:rgb(9, 122, 228);
+    padding-top: 50px;
+}
+
+#profile-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+}
+
+#profile-img img {
+    height: 600px;
+}
+
+#about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 15px; */
+    width: 65vw;
+    gap: 25px;
+    flex: 1;
+}
+
+#writing p {
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+#writing p:last-of-type {
+    padding-bottom: 0;
+}
+
+#writing p a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+#writing p a:hover {
+    color: white;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#stack,
+#soft-skills,
+#links {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 275px;
+    background-color: rgb(38, 38, 38);
+    color: #097ae4;
+    border-radius: 16px;
+    overflow-y: auto;
+}
+
+/* Tech Stack Container */
+#stack,
+#soft-skills,
+#links {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#stack #header,
+#soft-skills #header,
+#links #header {
+    padding: 10px 0 0 10px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    font-weight: 600;
+    justify-content: flex-start;
+}
+
+#stack #container,
+#soft-skills #container,
+#links #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+}
+
+#skill-type,
+#link {
+    background-color: white;
+    border-radius: 16px;
+    font-size: 1rem;
+    padding: 2px 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    color: black;
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#skill-type:hover {
+    background-color: rgb(9, 122, 228);
+    color: white;
+}
+
+#link {
+    background-color: #097ae4;
+}
+#link:hover {
+    background-color: white;
+}
+
+#link a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#link a:hover {
+    background-color: white;
+    color: black;
+}
+
+#fixed-tooltip {
+    position: fixed;
+    background-color: #333;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 9999;
+}
+
+#skill-type:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

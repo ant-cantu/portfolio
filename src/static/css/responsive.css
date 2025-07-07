@@ -1,0 +1,174 @@
+/* 768px */
+@media (max-width: 1024px) {
+    html {
+        overflow-x: hidden;
+    }
+    
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        height: 62.5px;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        z-index: 1000;
+        background-color: black;
+    }
+    .mobile-nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        transition: 0.3s;
+        border: 1px solid transparent;
+        padding: 5px;
+    }
+    .mobile-nav ul li a:hover {
+        color:rgb(9, 122, 228);
+    }
+    .mobile-nav ul li {
+        list-style: none;
+    }
+    .mobile-nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        width: 100vw;
+        margin: 0;
+        padding: 10px;
+        padding-top: 5px;
+    }
+    .mobile-nav img {
+        max-width: 50px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Top Page */
+    header {
+        justify-content: flex-start;
+    }
+
+    .hero {
+        background-image: url('../img/profile-pic.jpg');
+    }
+
+    .typewriter-container {
+        /* align-items: center; */
+        font-size: 1.5rem;
+        padding-left: 0;
+        width: 90vw;
+    }
+    .typewriter {
+        font-size: 1.5rem;
+    }
+
+    /* About Me */
+    .about {
+        justify-content: center;
+        padding-right: 15px;
+    }
+
+    #profile-img {
+        display: none;
+    }
+
+    #about-content {
+        padding: 0;
+        margin: 0;
+        width: 90vw;
+        gap: 10px;
+    }
+
+    .about .header {
+        padding-bottom: 25px;
+    }
+
+    #writing p {
+        padding-left: 0;
+        padding-bottom: 25px;
+    }
+
+    #writing p:last-of-type {
+        padding-bottom: 10px;
+    }
+
+    .skills {
+        padding-right: 15px;
+    }
+    .slide-in {
+        transform: none;
+        transition: opacity 1s ease-in;
+    }
+    .slide-in.visible {
+        transform: none;
+    }
+
+    /* Projects */
+    .projects {
+        justify-content: center;
+    }
+    .projects #sub1,
+    .projects #sub2 {
+        justify-content: center;
+        align-items: center;
+        padding-right: 15px;
+    }
+
+    /* Contact Form */
+    .contact {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 15px;
+        gap: 50px;
+    }
+
+    .contact .form-container {
+        width: 80vw;
+        padding: 20px;
+        /* padding: 20px 20px 20px 5px; */
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact #contact-form {
+        width: 75vw;
+    }
+
+    .nameField,
+    .emailField,
+    .messageField {
+        width: 97%;
+        min-width: 0;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
