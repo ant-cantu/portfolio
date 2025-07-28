@@ -71,5 +71,4 @@ def privacy():
 
 if os.getenv('APP_ENV') == "development":
     if __name__ == "__main__":
-        # app.run(debug=True)
         app.run(host='localhost', debug=True)
