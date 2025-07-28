@@ -17,13 +17,15 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
 # Redis Server URI
-REDIS_URI = os.getenv("REDIS_URI")
+if os.getenv('APP_ENV') == "development":
+    LIMITER_URI = "memory://"
+else:
+    LIMITER_URI = os.getenv("REDIS_URI")
 
 limiter = Limiter(
     get_remote_address,
     app=app,
-    storage_uri="memory://"
-    # storage_uri=REDIS_URI
+    storage_uri=LIMITER_URI
 )
 
 @app.route("/", methods=["GET", "POST"])
@@ -67,5 +69,6 @@ def submit():
 def privacy():
     return render_template('privacy.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if os.getenv('APP_ENV') == "development":
+    if __name__ == "__main__":
+        app.run(debug=True)
