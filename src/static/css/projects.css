@@ -54,6 +54,22 @@
     justify-content: space-between;
     flex: 1;
 }
+#project #container span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#external-link {
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+#external-link:hover {
+    color: rgb(9, 122, 228);
+}
 
 #project h1, p, #github-logo {
     padding: 0;
